@@ -30,25 +30,25 @@ export const skills: Skills = [
   {
     skill: "Product Strategy",
     description:
-      "dfdsfdfwe fsdihf dhs hdfs hdf ddf dfd s dfskdf dhs dfsdf ds dfsdfd dff",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     icon: "",
   },
   {
     skill: "Product Strategy",
     description:
-      "dfdsfdfwe fsdihf dhs hdfs hdf ddf dfd s dfskdf dhs dfsdf ds dfsdfd dff",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ",
     icon: "",
   },
   {
     skill: "Product Strategy",
     description:
-      "dfdsfdfwe fsdihf dhs hdfs hdf ddf dfd s dfskdf dhs dfsdf ds dfsdfd dff",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     icon: "",
   },
   {
     skill: "Product Strategy",
     description:
-      "dfdsfdfwe fsdihf dhs hdfs hdf ddf dfd s dfskdf dhs dfsdf ds dfsdfd dff",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     icon: "",
   },
 ];
