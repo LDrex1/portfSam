@@ -3,10 +3,27 @@ import Image from "next/image";
 type ImageCardProps = {
   src: string;
   alt: string;
-  width: [string, string, string];
+  //   width: [string, string, string];
+  styTail?: string;
+  aspect?: string;
+  height?: [string, string, string];
+  rounded?: string;
+  type: "short" | "long";
 };
-function ImageCard({ src, alt, width }: ImageCardProps): ReactNode {
-  const className = `relative w-${width[0]} md:w-${width[1]} lg:w-full  aspect-[1] overflow-hidden rounded-lg`;
+function ImageCard({
+  src,
+  alt,
+  //   width,
+  height,
+  styTail,
+  aspect,
+  rounded,
+  type,
+}: ImageCardProps): ReactNode {
+  const shortImageCard = `relative w-[60%] md:w-full lg:w-full lg:max-w-none aspect-[1] overflow-hidden rounded-3xl ${styTail}`;
+  const longImageCard = `relative w-[80%] md:w-full lg:w-[468px] h-auto md:h-[240px] lg:h-[270px] overflow-hidden rounded-t-2xl ${styTail}`;
+  const className = type === "short" ? shortImageCard : longImageCard;
+  console.log(className);
   return (
     <div className={className}>
       <Image
