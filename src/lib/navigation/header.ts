@@ -7,27 +7,27 @@ export type SubLink = {
 export const navLinks: SubLink[] = [
   {
     name: "projects",
-    href: "",
+    href: "#projects",
     tag: "",
   },
   {
     name: "skills",
-    href: "",
+    href: "#skills",
     tag: "",
   },
   {
     name: "testimonials",
-    href: "",
+    href: "#testimonials",
     tag: "",
   },
   {
     name: "resume",
-    href: "",
+    href: "#resume",
     tag: "",
   },
   {
     name: "contact",
-    href: "",
+    href: "#contact",
     tag: "",
   },
 ];
