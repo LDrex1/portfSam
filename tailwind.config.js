@@ -10,8 +10,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "primary1-white":
+        "white-lin":
           "linear-gradient(135deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%)",
+        "white-lin2": "linear-gradient(#FFFFFF 0%, #FFFFFF 20%)",
+        "green-rad": "radial-gradient(#0FADDF, #B3741700)",
+        "dark-rad": "radial-gradient(#39546D, #15151500)",
       },
       colors: {
         primary1: "#0C3247",
@@ -20,6 +23,9 @@ module.exports = {
         dark: "#121212",
         grey: "#5B6061",
         purple: "#4859F2",
+        linkedin: "#0A66C2",
+        call: "#49B568",
+        gmail: "#BB001B",
         "light-blue": "#D3E2F8",
         "sky-blue": "#F2FCFE",
         "bright-yellow": "#FFF9EE",
