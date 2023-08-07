@@ -22,27 +22,27 @@ type BodyProp = {
 };
 
 export const H1 = ({ text, medium, color, styTail }: BodyProp) => {
-  const className = `font-bold text-[34px] lg:text-3xl md:text-xl ${
+  const className = `font-bold text-[38px] lg:text-3xl md:text-xl ${
     medium && "font-medium"
   } ${color} ${styTail}`;
   return <h1 className={className}>{text}</h1>;
 };
 export const H2 = ({ text, medium, color }: BodyProp) => {
-  const className = `font-semibold text-2xl ${medium && "font-medium"} ${
-    color ? color : "text-high-emphasis"
-  } `;
+  const className = `font-semibold text-[34px] md:text-[1.25rem] lg:text-2xl ${
+    medium && "font-medium"
+  } ${color ? color : "text-high-emphasis"} `;
   return <h2 className={className}>{text}</h2>;
 };
 export const H3 = ({ text, medium, color }: BodyProp) => {
-  const className = `font-semibold md:text-[37px] text-xl ${
+  const className = `font-semibold text-[30px] md:text-[37px] lg:text-xl ${
     medium && "font-medium"
   } ${color}`;
   return <h3 className={className}>{text}</h3>;
 };
 export const Body = ({ text, medium, color, styTail }: BodyProp) => {
-  const className = `text-base font-normal ${medium && "font-medium"} ${
-    color || "text-grey"
-  } ${styTail}`;
+  const className = `text-base font-normal leading-8 ${
+    medium && "font-medium"
+  } ${color || "text-grey"} ${styTail}`;
   return <p className={className}>{text}</p>;
 };
 export const Title = ({ text, medium, color, styTail }: BodyProp) => {
@@ -57,6 +57,6 @@ export default function Typography({
   color,
   styTail,
 }: TypographyProp): React.ReactNode {
-  const className = `${textType}, ${fontSize} ${fontWeight} ${styTail}`;
+  const className = `${textType}, ${color} ${fontSize} ${fontWeight} ${styTail}`;
   return <p className={className}>{text}</p>;
 }
