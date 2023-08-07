@@ -1,4 +1,6 @@
+"use client";
 import Header from "@/components/layout/Header";
+// import "../components/fonts/rght_grotesk/right_go.ttf";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -18,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} scroll-smooth transition duration-700`}
+      >
         <Header />
 
         {children}
