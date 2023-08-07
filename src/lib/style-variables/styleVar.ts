@@ -11,7 +11,10 @@ export type ColorsType =
   | "light-blue"
   | "sky-blue"
   | "bright-yellow"
-  | "#4859F2";
+  | "#4859F2"
+  | "linedIn"
+  | "call"
+  | "gmail";
 
 export type FontSizeType =
   | "h1"
