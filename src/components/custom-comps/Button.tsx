@@ -10,7 +10,7 @@ type ButtonProp = {
   medium?: boolean;
   styTail?: string;
   type?: "button" | "submit" | "reset";
-  icon?: React.Component;
+  icon?:typeof React.Component;
 };
 export function Button({
   text,
@@ -20,18 +20,20 @@ export function Button({
   medium,
   styTail,
   type,
+  icon:Icon,
   ...rest
 }: ButtonProp & React.HtmlHTMLAttributes<HTMLButtonElement>) {
   //   const bg = background[0] !== "#" ? background : `[${background}]`;
   //   const textColor = color || "";
   //   const mid = (medium && "font-medium") || "";
-  const purpleButton = `bg-purple text-white font-bold px-4 py-2 md:px-4 md:py-3 lg:px-6 rounded-s-3xl rounded-e-3xl ${
+  const purpleButton = `bg-purple ${Icon && 'flex gap-x-2 items-center'} text-white font-bold px-4 py-2 md:px-4 md:py-3 lg:px-6 rounded-s-3xl rounded-e-3xl ${
     styTail || ""
   }`;
   const className = background === "purple" ? purpleButton : "";
   return (
     <button {...rest} type={type || "button"} className={className}>
-      {text}
+        {Icon && <Icon />}
+      <span>{text}</span>
     </button>
   );
 }
