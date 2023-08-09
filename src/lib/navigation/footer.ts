@@ -2,7 +2,7 @@ import { SubLink } from "./header";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { SiGmail } from "react-icons/si";
-import React, { JSXElementConstructor } from "react";
+import React from "react";
 type footerContent = {
   catchPhrase: string;
   socialMedia: (Omit<SubLink, "tag"> & {
