@@ -1,4 +1,4 @@
-import { Puzzle } from "@/assets/svgs/Icons";
+import {BsCloudDownload} from 'react-icons/bs'
 import ImageCard from "@/components/cards/ImageCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import Button from "@/components/custom-comps/Button";
@@ -25,6 +25,7 @@ export default function Home() {
             />
             <Body styTail="mt-2 md:mt-3 lg:mt-9" text={intro} />
             <Button
+            icon={BsCloudDownload}
               styTail="mt-5 md:mt-7 mb-9 md:mb-0 ms-8 md:ms-0 lg:mt-16 text-white shadow-shade1"
               text="Download Resume"
               background="purple"
@@ -156,7 +157,7 @@ export default function Home() {
 
   const Section5 = () => {
     return (
-      <section className="bg-white px-4 sm:px-6 md:px-8 lg:pt-16 lg:px-28 flex flex-col gap-y-3 md:gap-y-5 lg:gap-y-8">
+      <section className="bg-white px-4 sm:px-6 md:px-8 pt-6 sm:pt-8 md:pt-12 lg:pt-16 lg:px-28 flex flex-col gap-y-3 md:gap-y-5 lg:gap-y-8">
         <Typography
           styTail="text-[26px] md:text-[30px] lg:text-[40px] font-medium"
           color="text-primary2"
@@ -171,7 +172,7 @@ export default function Home() {
     return (
       <section
         id="testimonials"
-        className="bg-sky-blue py-6 sm:py-10 md:py-15 px-4 sm:px-6 md:px-8 lg:pt-16 lg:px-28 flex flex-col md:flex-row md:gap-x-9 lg:gap-x-10"
+        className="bg-sky-blue py-6 sm:py-10 md:py-15 px-4 sm:px-6 md:px-8 lg:pt-16 lg:px-28 flex flex-col gap-y-3 md:gap-y-6 lg:gap-y-0 lg:flex-row lg:gap-x-10"
       >
         <Typography
           styTail="w-full shrink-1 grow-1 basis-[50%] sm:min-w-[180px] lg:min-w-[230px] lg:max-w-[450px] text-[26px] md:text-[30px] lg:text-[40px] font-medium"
