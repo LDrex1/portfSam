@@ -20,7 +20,7 @@ function ImageCard({
   rounded,
   type,
 }: ImageCardProps): ReactNode {
-  const shortImageCard = `relative w-[60%] md:w-full lg:w-full lg:max-w-[500px] ${
+  const shortImageCard = `relative w-[60%] md:w-full lg:max-w-[500px] ${
     aspect || "aspect-[1]"
   } overflow-hidden rounded-3xl ${styTail}`;
   const longImageCard = `relative w-[80%] sm:min-w-[200px] md:w-full lg:min-w-[270px] lg:w-[468px] h-auto md:h-[240px] lg:h-[270px] overflow-hidden rounded-t-2xl ${styTail}`;
