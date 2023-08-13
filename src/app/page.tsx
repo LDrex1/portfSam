@@ -1,4 +1,4 @@
-import {BsCloudDownload} from 'react-icons/bs'
+import { BsCloudDownload } from "react-icons/bs";
 import ImageCard from "@/components/cards/ImageCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import Button from "@/components/custom-comps/Button";
@@ -25,7 +25,7 @@ export default function Home() {
             />
             <Body styTail="mt-2 md:mt-3 lg:mt-9" text={intro} />
             <Button
-            icon={BsCloudDownload}
+              icon={BsCloudDownload}
               styTail="mt-5 md:mt-7 mb-9 md:mb-0 ms-8 md:ms-0 lg:mt-16 text-white shadow-shade1"
               text="Download Resume"
               background="purple"
