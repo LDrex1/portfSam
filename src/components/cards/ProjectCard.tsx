@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { Body, Title } from "../typography/Typography";
 import ImageCard from "./ImageCard";
 import { Project } from "@/lib/landing/landContent";
+import Link from "next/link";
 
 function ProjectCard({
   styTail,
@@ -29,12 +30,14 @@ function ProjectCard({
         type={"long"}
       />
       <div className="flex flex-col sm:max-w-[550px] md:gap-y-4 md:justify-self-start lg:max-w-[552px] ">
-        <Title
-          styTail="text-[24px]"
-          medium
-          color="text-white"
-          text={project.title}
-        />
+        <Link href={{ pathname: `/projects/${project.title}` }}>
+          <Title
+            styTail="text-[24px]"
+            medium
+            color="text-white"
+            text={project.title}
+          />
+        </Link>
         <Body color="text-light-blue" text={project.about} />
       </div>
     </div>
