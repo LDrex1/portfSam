@@ -1,5 +1,6 @@
 import { Braduis, ColorsType } from "@/lib/style-variables/styleVar";
 import { HtmlProps } from "next/dist/shared/lib/html-context";
+import Link from "next/link";
 import React from "react";
 
 type ButtonProp = {
@@ -11,6 +12,9 @@ type ButtonProp = {
   styTail?: string;
   type?: "button" | "submit" | "reset";
   icon?: typeof React.Component;
+  tag?: "a" | "button";
+  href?: string;
+  download?: string;
 };
 export function Button({
   text,
@@ -21,6 +25,9 @@ export function Button({
   styTail,
   type,
   icon: Icon,
+  tag,
+  href,
+  download,
   ...rest
 }: ButtonProp & React.HtmlHTMLAttributes<HTMLButtonElement>) {
   //   const bg = background[0] !== "#" ? background : `[${background}]`;
@@ -28,15 +35,29 @@ export function Button({
   //   const mid = (medium && "font-medium") || "";
   const purpleButton = `bg-purple ${
     Icon && "flex gap-x-2 items-center"
-  } text-white font-bold px-4 py-2 md:px-4 md:py-3 lg:px-6 rounded-s-3xl rounded-e-3xl ${
+  } text-white font-bold px-4 py-2 md:px-4 md:py-3 lg:px-6 w-fit rounded-s-3xl rounded-e-3xl ${
     styTail || ""
   }`;
   const className = background === "purple" ? purpleButton : "";
   return (
-    <button {...rest} type={type || "button"} className={className}>
-      {Icon && <Icon />}
-      <span>{text}</span>
-    </button>
+    <>
+      {tag === "a" ? (
+        <Link
+          className={className}
+          download={download && download}
+          href={"" + href}
+          target="_blank"
+        >
+          {Icon && <Icon />}
+          <span>{text}</span>
+        </Link>
+      ) : (
+        <button {...rest} type={type || "button"} className={className}>
+          {Icon && <Icon />}
+          <span>{text}</span>
+        </button>
+      )}
+    </>
   );
 }
 
