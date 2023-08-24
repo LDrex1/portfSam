@@ -20,7 +20,7 @@ function HeaderClient({ children }: { children: React.ReactNode }) {
   } bg-white overflow-hidden flex -mt-2 pe-14 lg:pe-0 lg:mt-0 absolute md:static py-2 lg:py-0 px-4 lg:h-fit lg:translate-x-0 lg:px-0 lg:bg-transparent transition-all ease-in-out delay-30 duration-500 flex-col lg:flex-row gap-y-6 lg:gap-y-0 lg:gap-x-14`;
   console.log(className);
   return (
-    <header className="z-10 py-3 md:py-4 lg:py-8 px-3 md:px-10 lg:px-28 bg-bright font-medium fixed w-full transition-all ease-in-out delay-30 duration-1000">
+    <header className="z-10 py-3 md:py-4 lg:py-5 xl:py-8 px-3 md:px-10 lg:px-28 bg-bright font-medium fixed w-full transition-all ease-in-out delay-30 duration-1000">
       <nav className="lg:flex w-fit md:w-full justify-between items-center font-medium uppercase text-primary2">
         {children}
         <div>
