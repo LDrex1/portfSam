@@ -13,10 +13,10 @@ import Typography, {
 import { landing, projects, skills, workExp } from "@/lib/landing/landContent";
 
 export default function Home() {
-  const { greeting, myPicture, cvLink, intro } = landing.section1;
+  const { greeting, myPicture, cvLink, intro, intro2 } = landing.section1;
   const Section1 = () => {
     return (
-      <section className="bg-bright px-4 pt-16 sm:pt-20 pb-12 lg:pt-0 lg:flex lg:flex-col lg:justify-center lg:h-[90vh] md:px-10 lg:px-28">
+      <section className="bg-bright px-4 pt-16 sm:pt-20 pb-12 lg:pt-20 xl:pt-18 lg:flex lg:flex-col lg:justify-center lg:min-h-[90vh] md:px-10 lg:px-20 xl:px-28 sm:px-9">
         <div className="flex flex-col md:gap-x-[calc(14px+4vw)] md:grid-cols-[minmax(350px,_700px)_minmax(300px,_400px)] lg:justify-between items-center md:grid lg:grid-cols-[minmax(200px,_700px)_minmax(200px,_500px)] md:grid-flow-dense lg:gap-x-[calc(14px+7vw)]">
           <div>
             <H1
@@ -25,6 +25,9 @@ export default function Home() {
             />
             <Body styTail="mt-2 md:mt-3 lg:mt-9" text={intro} />
             <Button
+              tag="a"
+              href={cvLink}
+              download="SamuelOgbCV"
               icon={BsCloudDownload}
               styTail="mt-5 md:mt-7 mb-9 md:mb-0 ms-8 md:ms-0 lg:mt-16 text-white shadow-shade1"
               text="Download Resume"
@@ -34,8 +37,8 @@ export default function Home() {
           </div>
 
           <ImageCard
-            src={""}
-            alt={""}
+            src={myPicture}
+            alt={"Samuel Ogbonna, with a shirt and tie"}
             styTail="mix-blend-multiply  md:rounded-3xl lg:rounded-[90px] md:justify-self-center lg:justify-self-end"
             type={"short"}
           />
@@ -46,10 +49,13 @@ export default function Home() {
 
   const Section2 = () => {
     return (
-      <section className="py-6 lg:h-[100vh] md:py-10 py-15 bg-bright-yellow md:grid grid-cols-5 lg:px-28 items-center md:gap-x-6 lg:gap-x-36 justify-between px-4 sm:px-9">
+      <section className="py-6 md:min-h-[100vh] space-y-3 md:py-10 py-15 bg-bright-yellow lg:grid grid-cols-5 lg:px-20 xl:px-28 items-center md:gap-x-6 lg:gap-x-28 xl:gap-x-36 justify-between px-4 sm:px-9">
         <div className="col-span-2 flex flex-col gap-y-7">
           <H3 color="text-primary2" text="My Skills" />
-          <Body text={intro} />
+          <div>
+            <Body text={"" + intro2} />
+            {/* <Body text={"" + intro2} /> */}
+          </div>
         </div>
         <div
           id="skills"
@@ -72,7 +78,7 @@ export default function Home() {
               <Body
                 styTail="py-3 md:py-5 lg:py-7 justify-self-start"
                 color="text-grey"
-                text={description}
+                text={description.substring(0, 150)}
               />
             </div>
           ))}
@@ -141,7 +147,7 @@ export default function Home() {
     return (
       <section
         id="projects"
-        className="bg-primary1 pt-3 sm:pt-6 md:pt-10 pb-4 sm:pb-8 md:pb-11 lg:pb-20 px-4 sm:px-6 md:px-8 lg:pt-16 lg:px-28 flex flex-col gap-y-3 md:gap-y-5 lg:gap-y-8"
+        className="bg-primary1 pt-3 sm:pt-6 md:pt-10 pb-4 sm:pb-8 md:pb-11 lg:pb-20 px-4 sm:px-6 md:px-8 lg:pt-16 xl:px-28 flex flex-col gap-y-3 md:gap-y-5 lg:gap-y-8"
       >
         <H3 color="text-white" text="Projects" />
         {projects.map((project) => (
