@@ -10,7 +10,13 @@ import Typography, {
   H3,
   Title,
 } from "@/components/typography/Typography";
-import { landing, projects, skills, workExp } from "@/lib/landing/landContent";
+import {
+  education,
+  landing,
+  projects,
+  skills,
+  workExp,
+} from "@/lib/landing/landContent";
 
 export default function Home() {
   const { greeting, myPicture, cvLink, intro, intro2 } = landing.section1;
@@ -89,7 +95,7 @@ export default function Home() {
 
   const Section3 = () => {
     return (
-      <section className="bg-white px-4 sm:px-6 md:px-8 flex flex-col py-6 lg:py-20 lg:h-[100vh] sm:py-10 md:py-15 lg:px-28">
+      <section className="bg-white px-4 sm:px-6 md:px-8 flex flex-col py-6 lg:py-20 lg:min-h-[100vh] sm:py-10 md:py-15 lg:px-28">
         <div className="sm:grid grid-cols-2 gap">
           <div id="resume" className="">
             <H3 text="Work Experience" color="text-primary2" />
@@ -120,13 +126,13 @@ export default function Home() {
             <div className="relative mt-4 md:mt-6 gap-y-3 sm:gap-y-6 md:gap-y-7 flex flex-col lg:gap-y-9">
               <span className="absolute w-1 border-r-2 border-dashed h-full left-4 top-0"></span>
 
-              {workExp.map(({ company, role, startDate, endDate, logo }) => (
-                <div key={company} className="flex gap-x-3">
+              {education.map(({ school, role, startDate, endDate, logo }) => (
+                <div key={school} className="flex gap-x-3">
                   <span>logo</span>
                   <div>
                     <Typography
                       styTail="sm:text-[22px] lg:text-[26px]"
-                      text={"Kwame Nkrumah University"}
+                      text={school}
                       textType={"light-text"}
                       fontSize={"text-md"}
                       fontWeight={"text-v-high"}
