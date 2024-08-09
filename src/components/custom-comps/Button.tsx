@@ -2,6 +2,7 @@ import { Braduis, ColorsType } from "@/lib/style-variables/styleVar";
 import { HtmlProps } from "next/dist/shared/lib/html-context";
 import Link from "next/link";
 import React from "react";
+import { IconType } from "react-icons/lib";
 
 type ButtonProp = {
   text: string;
@@ -11,7 +12,7 @@ type ButtonProp = {
   medium?: boolean;
   styTail?: string;
   type?: "button" | "submit" | "reset";
-  icon?: typeof React.Component;
+  icon?: typeof React.Component | IconType;
   tag?: "a" | "button";
   href?: string;
   download?: string;
