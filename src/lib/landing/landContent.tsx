@@ -4,10 +4,10 @@ import Gear from "@/assets/svgs/Gear.svg";
 import Personnel from "@/assets/svgs/Personnel.svg";
 import Puzzle from "@/assets/svgs/Puzzle.svg";
 import { IntRange } from "../specTypes";
-export const mySelf = "Samuel Ogbonna";
-const intro = `I am a Technical Product Manager with 4 years of experience supporting and leading empowered cross-functional teams to deliver Enterprise grade applications across the logistics,marketing and commercial sectors.`;
+export const mySelf = "Oluwadamilare Abiola";
+const intro = `I am a Cloud/Devops enginner with 3 years of experience in frontend web development.`;
 const intro2 = `
-I lead teams to create scalable tech solutions that are aligned with local and global business objectives, delighting users and driving sustainable process improvement.
+I am AWS certified and ready to put the knowledge I've aquired to exel in roles such as DevOps Engineer, Cloud Engineer, Cloud Administrator, Cloud Architect, Solutions Atchitect and Cloud Support.
   `;
 
 const greeting = `Hello, I am ${mySelf}`;
@@ -24,6 +24,7 @@ type WorkExp = {
   endDate: any;
   logo: string;
 };
+type Education = Omit<WorkExp, "company"> & { school: string };
 type ParNum = Record<`par${number}`, string | undefined> &
   Record<`li${number}`, string[]>;
 export type ProjectDetails = {
@@ -60,54 +61,56 @@ export const landing: Landing = {
 
 export const skills: Skills = [
   {
-    skill: "Product Strategy",
-    description: `Developing a clear product strategy aligned with business goals. This involves understanding market trends, customer needs, and technical possibilities to create a roadmap that maximizes the product's value and innovation.`,
+    skill: "COntainerization",
+    description: `Managing microservices in containers such as Docker, ECS and Kubenetes`,
     icon: <Puzzle />,
   },
   {
-    skill: "Product Management",
-    description: `Collaborating with cross-functional teams to define product requirements, prioritize features, and ensure the successful execution of the product roadmap. I oversee tasks such as market research, user feedback analysis, sprint planning, and continuous communication to drive the product's development, meet customer needs, and achieve business goals.`,
+    skill: "Systems Administration",
+    description: `Linux and Bash Scripting`,
     icon: <Cube />,
   },
   {
-    skill: "User Research",
-    description: `I engage in various user research methods such as interviews, surveys, and usability testing to gain valuable insights into customer needs, behaviours, and preferences. This informs the development of user-centered products by guiding feature prioritisation, design decisions, and overall product strategy.`,
+    skill: "Communication Skill",
+    description: `Accurately conveing a message to a person or group of people while being polite and encouraging feedbacks`,
     icon: <Personnel />,
   },
   {
-    skill: "Development Product Design",
-    description: `Leveraging my deep understanding of the technical aspects of the product, including architecture, systems, and development processes, enables me to effectively communicate with engineering teams, solve problems, and make informed decisions about the product's technical direction.`,
+    skill: "Cloud Infrastructure",
+    description: `Seamless integration and automation of AWS services such as S3, EC2, EKS, API Gateway, and many more. Operation of the AWS VPC.`,
     icon: <Gear />,
   },
 ];
 
 export const workExp: WorkExp[] = [
   {
-    company: "Anheuser Busch InBev",
-    role: "Senior Product Manager",
-    startDate: dateConverter([1, 7, 2022]),
-    endDate: "Present",
+    company: "Areabox",
+    role: "Senior Frontend Developer",
+    startDate: dateConverter([1, 3, 2022]),
+    endDate: dateConverter([30, 10, 2022]),
     logo: "",
   },
   {
-    company: "Anheuser Busch InBev",
-    role: "Technical Product Manager",
-    startDate: dateConverter([2, 3, 2021]),
-    endDate: dateConverter([30, 6, 2022]),
+    company: "Areabox",
+    role: "Senior Frontend Developer",
+    startDate: dateConverter([1, 3, 2022]),
+    endDate: dateConverter([30, 10, 2022]),
+    logo: "",
+  },
+];
+export const education: Education[] = [
+  {
+    school: "Teesside University",
+    role: "Aerospace Engineering (Distinction)",
+    startDate: dateConverter([17, 1, 2023]),
+    endDate: dateConverter([14, 5, 2024]),
     logo: "",
   },
   {
-    company: "Anheuser Busch InBev",
-    role: "Artificial Intelligence Engineer (Global Management Trainee)",
-    startDate: dateConverter([1, 2, 2020]),
-    endDate: dateConverter([1, 3, 2021]),
-    logo: "",
-  },
-  {
-    company: "FMDQ Securities Depository",
-    role: "Tech Operations Researcher",
-    startDate: dateConverter([1, 1, 2019]),
-    endDate: dateConverter([30, 9, 2019]),
+    school: "Samara National Research University",
+    role: "Maintainance of Aircraft and Engines (1st Class)",
+    startDate: dateConverter([1, 9, 2016]),
+    endDate: dateConverter([12, 2, 2021]),
     logo: "",
   },
 ];
@@ -115,14 +118,10 @@ export const workExp: WorkExp[] = [
 export const projects: Project[] = [
   {
     title: "Spotlight",
-    about: `Spotlight is an ecosystem of logistics technologies that is designed to manage the end-to-end logistics operations of AB InBev. 
-    It's a modular system that covers specific critical functions like fleet management, delivery management, payments orchestration, 
-    operational safety management, and analytics.`,
+    about: `Cloud-Native application deployment and management using Amaon EKS and Docker`,
     details: {
       overview: {
-        par1: `Spotlight is an ecosystem of logistics technologies that is designed to manage the end-to-end logistics operations of AB InBev. 
-            It's a modular system that covers specific critical functions like fleet management, delivery management, payments orchestration, 
-            operational safety management, and analytics.`,
+        par1: `Orchestating AWS infrastructure using Terrafoam configuaration files , ensuring standerdized and scalable enviroments.`,
         par2: `With its microservice architecture, Spotlight is designed to evolve with the needs of the industry, and more modules can be 
             added as the need arises.`,
         li1: [],
